@@ -33,21 +33,29 @@ always @(posedge clk) begin
     end
 end
 
+	
+	
+
+	
+	
+	
 localparam addrea_length = 16;	
 localparam wr_rd_bit_length = 8;
 
-ssss
+	reg[15:0] addr_reg = 0;
+
 	
-//always @(flag == 1'b1) 
-//begin : sh_case
-//    if (temp_reg == command_read) begin
-//                cr = 1; 
-//            end else if (temp_reg == command_write) begin 
-//                cw = 1;
-//            end else begin 
-//                {cr ,cw} =0;
-//            end
-//end
+	
+always @(flag == 1'b1) 
+begin : sh_case
+    if (temp_reg == command_read) begin
+                cr = 1; 
+            end else if (temp_reg == command_write) 
+	begin                 cw = 1;
+           end else begin 
+                {cr ,cw} =0;
+            end
+end
 
 assign data_out = temp_reg[7];
 
