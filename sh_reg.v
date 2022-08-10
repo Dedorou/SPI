@@ -33,6 +33,11 @@ always @(posedge clk) begin
     end
 end
 
+localparam addrea_length = 16;	
+localparam wr_rd_bit_length = 8;
+
+ssss
+	
 //always @(flag == 1'b1) 
 //begin : sh_case
 //    if (temp_reg == command_read) begin
